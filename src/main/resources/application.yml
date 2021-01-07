@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/db1?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+    username: admin
+    password: DEFdef123!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  jpa:
+    hibernate:
+      ddl-auto: update #实时更新实体类和数据库表字段的关系
+    show-sql: true     #将sql的语句打印出来
+
+  thymeleaf:
+    cache: false
+
+  messages:
+    encoding: GBK
+    basename: message_zh_CN

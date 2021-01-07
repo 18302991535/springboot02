@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+日期时间:<p th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}">1555</p>
+<!--price中的1指的的是整数位,2指的是保留的小数位-->
+价格:<p th:text="'￥'+${#numbers.formatDecimal(price,1,2)}">0000000</p>
+<!--截取的字符串的个数包含后面的三个小点点-->
+字符串:<p th:text="${#strings.abbreviate(str,8)}">内容内容内容</p>
+<!--截取字符串[)-->
+<p th:text="${#strings.substring(str1,2,4)}"></p>
+<p th:if="${!#strings.isEmpty(str1)}">str1不为空....</p>
+</body>
+</html>

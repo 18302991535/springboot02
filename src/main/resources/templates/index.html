@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="../static/css/index.css" media="all" th:href="@{/css/index.css}">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}"><!--themeleaf模板引擎学习--></title>
+</head>
+<body>
+<h1 th:text="${thymeleaf}"></h1>
+<h2 th:text="#{country}"></h2>
+<div th:switch="${role}">
+    <p th:case="admin">管理员</p>
+    <p th:case="employee">员工</p>
+</div>
+</body>
+</html>
