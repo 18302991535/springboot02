@@ -24,5 +24,5 @@ public interface Person1Repository  extends JpaRepository<User,String> {
     public List<User> getNameLike(@Param("username") String username);
     @Query(value = "select * from user u where length(username)=6",nativeQuery = true)
     public List<User> getNameLengthString();
-    public void demo(String id);
+    public void demo1(String id);
 }
